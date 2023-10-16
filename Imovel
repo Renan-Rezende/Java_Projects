@@ -1,0 +1,50 @@
+package iptu_vv;
+
+public class Imovel {
+	
+	int matricula;
+    String nome;
+    float impostos;
+    int  mesesAtraso;
+  
+    public void cadastroImovel(int matricula, String nome,float imposto, int mesesAtraso ) {
+    	this.matricula = matricula;
+    	this.nome = nome;
+    	this.mesesAtraso = mesesAtraso;
+    	this.impostos = imposto;
+    	
+    	System.out.print("Matricula: " + this.matricula +
+    			         "\nNome: " + this.nome + 
+    			         "\nMeses de atraso: " + this.mesesAtraso + 
+    			         "\nImpostos: " + this.impostos + "\n");
+    }
+    
+    public void calcularImpostos() {
+    	
+    	float impostosCalculados = this.impostos;
+    	
+    	if(this.mesesAtraso == 0) {
+   	         System.out.print("Nenhuma multa a pagar!");
+         } else if(this.mesesAtraso > 0 && this.mesesAtraso <= 5 ) {
+        	 impostosCalculados *= 1.01 ;
+    	     System.out.print("Impostos com multa: " + impostosCalculados);
+    	 } else if(this.mesesAtraso >= 6 && this.mesesAtraso <= 8 ) {
+    		 impostosCalculados *= 1.023 ;
+       	     System.out.print("Impostos com multa: " + impostosCalculados);
+         } else if(this.mesesAtraso >= 9 && this.mesesAtraso <= 10 ) {
+        	 impostosCalculados *= 1.03 ;
+             System.out.print("Impostos com multa: " + impostosCalculados);
+     	 } else if(this.mesesAtraso >= 11 && this.mesesAtraso <= 12 ) {
+     		impostosCalculados *= 1.054 ;
+             System.out.print("Impostos com multa: " + impostosCalculados);
+         } else if(this.mesesAtraso >12 ) {
+        	 impostosCalculados *=  1.1 ;
+        	 System.out.print("Impostos com multa: " +impostosCalculados);
+     	 }
+          
+    }
+    
+    public String getNome() {
+    	return nome;
+    }
+}
