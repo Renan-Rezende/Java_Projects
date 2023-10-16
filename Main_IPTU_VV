@@ -1,0 +1,42 @@
+package iptu_vv;
+
+public class main {
+    
+	
+	public static void main(String[] args) {
+			
+		Municipio guarapari = new Municipio();
+		Municipio vilaVelha = new Municipio();
+		
+		guarapari.addMunicipio("Guarapari");
+		vilaVelha.addMunicipio("VilaVelha");;
+		
+		Imovel imovel1 = new Imovel();
+		Imovel imovel2 = new Imovel();
+		
+		Imovel imovel3 = new Imovel();
+		Imovel imovel4 = new Imovel();
+		Imovel imovel5 = new Imovel();
+		Imovel imovel6 = new Imovel();
+		
+		
+		imovel1.cadastroImovel(2023, "Renan", 1200, 14);
+		imovel2.cadastroImovel(2024, "Rodrigo", 1500, 1);
+		
+		imovel3.cadastroImovel(2025, "Alberto", 1700, 4);
+		imovel4.cadastroImovel(2026, "Heitor", 2200, 10);
+		imovel5.cadastroImovel(2027, "Pedro", 3300, 7);
+		imovel6.cadastroImovel(2028, "Bricio", 1000, 1);
+		
+		guarapari.addImovel(imovel1);	
+		guarapari.addImovel(imovel2);
+		
+		vilaVelha.addImovel(imovel3);
+		vilaVelha.addImovel(imovel4);	
+		vilaVelha.addImovel(imovel5);
+		vilaVelha.addImovel(imovel6);
+		Imovel nomeProprietario = vilaVelha.imoveis.get(1);
+        System.out.println("Nome do proprietarioprimeiro imóvel: " + nomeProprietario.getNome());
+		 
+	}
+}
