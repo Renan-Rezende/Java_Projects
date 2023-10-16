@@ -1,0 +1,10 @@
+package sexshop;
+
+public class Main {
+    public static void main(String[] args) {
+        Loja loja1 = new Loja();
+        Pedido pedido1 = new Pedido();
+
+    }
+}
+
