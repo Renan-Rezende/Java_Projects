@@ -1,0 +1,19 @@
+package iptu_vv;
+import java.util.ArrayList;
+
+public class Municipio {
+
+	 String nome;
+	 ArrayList<Imovel> imoveis = new ArrayList<Imovel>();
+	 
+	 public void addMunicipio(String nome) {
+		 this.nome = nome;
+	 }
+	 
+	 public void addImovel(Imovel imovel) {
+		 imoveis.add(imovel);
+		 System.out.print("Quantidade de imóveis em " + this.nome +  ": " + this.imoveis.size() + "\n");
+	 }
+	 
+	 
+}
