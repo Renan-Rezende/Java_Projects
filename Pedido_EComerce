@@ -1,0 +1,23 @@
+package sexshop;
+import java.util.Date;
+import java.util.ArrayList;
+
+public class Pedido {
+     
+	 int pedidoId;
+	 Date dataEmissao;
+	 float valorTotalCalculado;
+	 ArrayList<ItemPedido> itensPedido = new ArrayList<ItemPedido>();
+     Date dataAtual = new Date();
+
+	 
+	 public void addItemPedido(ItemPedido item) {
+		 itensPedido.add(item);
+	 }
+	 
+	 public void fazerPedido( int pedidoId) {
+		 this.pedidoId = pedidoId;
+		 this.dataEmissao = dataAtual;
+	 }
+	 
+}
